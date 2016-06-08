@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body>
+  <!-- We are the Winners modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-11">
+              <h4 class="modal-title" id="myModalLabel">Congratulations, you won! \(^///^)/</h4>
+            </div>
+            <div class="col-sm-1">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>       
+            </div> <!-- /.row-->
+          </div> <!-- /.modal body-->
+        </div> <!-- /.modal content-->
+      </div> <!-- /.modal dialog-->
+    </div>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+              Rules
+          </li>
+          <li> 
+            Choose two cells that exactly sum up to 10 (6+4) or are same number (8-8). Continue checking cells until one or less are left.
+
+            If you are stuck, you can remove up to any three single cells, or add more rows.
+          </li>
+          <li>
+            * Pick two cells that are horizontally or vertically adjacent.
+            <img class="tutorial-img" src="images/rule1.png"></a>
+          </li>
+          <li>
+            * You can also pick two cells that are on same horizontal and vertical line if there are only crossed cells inbetween.
+            <img class="tutorial-img" src="images/rule2.png"></a>
+          </li>
+          <li>
+            * Two cells from adjacent columns count too. The cells are 'next to each other' if one cell is last of a column and other is first of the next column. There can be crossed cells inbetween.
+            <img class="tutorial-img" src="images/rule3.png"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+        <div class="row">
+          <a href="#menu-toggle" class="btn btn-menutoggle" id="menu-toggle" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="menuButtonText">Rules</span>
+          </a>          
+        </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+            <h1 class="title">Ayy Numbers!</h1>
+            <p>Cross the Cells until there's one or none!</p>
+            <p class="credits">Made by <a class="twitter" href="http://www.twitter.com/escheria">@Escheria</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div id="mount-game" class="col-md-6 col-md-offset-3"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+    <!-- Scripts-->
+    <script src="js/app-dependency.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+  </html>

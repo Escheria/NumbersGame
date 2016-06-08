@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:400,500);
+
+body {
+  background-color: #724455;
+  color: #DCDCDC;
+}
+
+h1.title{
+  font-family: 'Kanit';
+  color: #E0C2C2;
+  font-size: 48px;
+}
+
+@media (min-width: 600px){
+  h1.title{
+    font-size: 80px;
+  }
+}
+
+/* --------- BOARD --------- */
+.board {
+  display: flex;
+}
+
+.board > ul
+{
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left:0;
+  width: 100%;
+}
+
+/* --------- TOOLBAR --------- */
+
+.toolbar-container{
+  padding: 7px;
+}
+
+.spacer-tiny {
+  margin: 3px;
+  visibility: hidden;
+}
+
+.btn.btn-toolbar {
+/*  margin-left: 7px; */
+  margin-bottom: 10px;
+  background-color: #B75C85;
+  color: #fff;
+  font-weight: bold;
+  width: 50%;
+}
+
+/* No more actions can be taken */
+.btn.btn-toolbar.inactive {
+  background-color: #826671 !important;
+}
+
+/* Active when its indicating a 'pending' action */
+.btn.btn-toolbar.active {
+  background-color: #D880A4 !important;
+}
+
+
+/* --------- CELL BOX --------- */
+
+.box{
+  margin: 1px;
+  position: relative;
+  width: calc(100% / 9.8); /* Desired Width */
+  display: inline-flex;
+}
+
+@media (min-width: 380px){
+  .box{
+    width: calc(100% / 9.5); /* Desired Width */
+  }
+}
+
+.box:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.adjust{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* --------- CELL GAME --------- */
+.cell {
+  margin: 1px;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.cell.init {
+  background: #709625;
+  border: 0;
+  box-shadow: 0px 2px 2px #000000;
+  padding: 1px;
+  width: 30px;
+  height: 30px;
+}
+
+.cell.select {
+  background: #709625;
+  border: 0;
+  box-shadow: 0px 2px 2px #000000;
+  padding: 1px;
+  width: 30px;
+  height: 30px;
+}
+
+.cell.crossed {
+  background-image: -webkit-linear-gradient(top,#002676 0,#000000 100%);
+  background-image: -o-linear-gradient(top,#002676 0,#000000 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#002676),to(#000000));
+  background-image: linear-gradient(to bottom,#002676 0,#000000 100%);
+
+  /* Looks like enabled button but it's disabled */
+  cursor: default;
+  pointer-events: none;
+}
+
+
+/* --------- SIDEBAR --------- */
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 300px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 300px;
+    width: 0;
+    height: 100%;
+    margin-left: -300px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 300px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -300px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    /* line-height: 40px; */
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+/* --------- CUSTOM BUTTONS --------- */
+
+.btn-numbers {
+  background-color: #A4627C;
+  color: #fff !important;
+}
+
+
+.btn-crossed {
+  background-color: #785160;
+  color: #fff !important;
+  pointer-events: none;
+}
+
+.btn-selected {
+  background-color: #DE6894;
+  color: #fff !important;
+}
+
+.btn-menutoggle,
+.btn-menutoggle:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: medium;
+  font-weight: bold;
+  color: #E0C2C2 !important;
+}
+
+/* ---- */
+
+.tutorial-img {
+  max-width: 290px;
+}
+
+.credits { 
+  float: right;
+  margin-right: 10px;
+}
+
+a.twitter {
+  color: #FFF;
+}
+
+.modal-content {
+  background-color: #B55D79;
+}
